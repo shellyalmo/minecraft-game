@@ -88,7 +88,37 @@ a:visited {
 /* game main screen */
 .game-container {
   display: flex;
+  height: 100vh;
 }
 .game-board {
+  margin: 1rem 0;
   width: 80vw;
+  display: grid;
+  grid-template-rows: repeat(15, 1fr);
+  grid-template-columns: repeat(20, 1fr);
+}
+
+.sky {
+  width: 4vw;
+  height: 7vh;
+  background-color: rgb(74, 173, 206);
+  border: 1px solid black;
+}
+.cloud {
+  background-color: #fff;
+}
+.wood {
+  background-image: url("../assets/cells/wood.png");
+}
+.tree {
+  background-image: url("../assets/cells/tree.png");
+}
+.soil {
+  background-image: url("../assets/cells/soil.png");
+}
+.sand {
+  background-image: url("../assets/cells/sand.png");
+}
+.stone {
+  background-image: url("../assets/cells/stone.png");
 }
