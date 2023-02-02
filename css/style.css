@@ -102,6 +102,8 @@ a:visited {
   width: 4vw;
   height: 7vh;
   background-color: rgb(74, 173, 206);
+}
+.sky:hover {
   border: 1px solid black;
 }
 .cloud {

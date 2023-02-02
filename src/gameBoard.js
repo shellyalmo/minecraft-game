@@ -1,8 +1,6 @@
 // all needs to be blue sky and then add layers
 // 0= blue sky, 1=cloud, 2=wood,3=tree,4=soil,5=sand,6=stone
 const gameArray = [
-  //   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  //   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, , 0, 0, 0, 0],
@@ -17,12 +15,6 @@ const gameArray = [
   [5, 5, 5, 4, 4, 4, 2, 2, 2, 2, 2, 4, 4, 4, 4, 4, 5, 2, 5, 5],
   [6, 6, 6, 4, 4, 4, 4, 4, 4, 5, 6, 6, 6, 6, 4, 4, 5, 5, 5, 6],
   [6, 6, 6, 4, 4, 4, 4, 4, 4, 5, 6, 6, 6, 6, 4, 6, 6, 6, 6, 6],
-
-  //   [5, 5, 4, 4, 0, 0, 6, 6, 6, 0],
-  //   [5, 5, 4, 4, 4, 5, 5, 6, 6, 0],
-  //   [0, 5, 4, 5, 0, 0, 6, 6, 0, 0],
-  //   [5, 5, 4, 4, 0, 0, 6, 6, 6, 0],
-  //   [5, 5, 4, 4, 4, 5, 5, 6, 6, 0],
 ];
 
 const gameBoard = document.getElementById("cells-board");
@@ -40,27 +32,21 @@ function createBoard() {
       switch (gameArray[i][j]) {
         case 1:
           cell.classList.add("cloud");
-          //   gameBoard.appendChild(cell);
           break;
         case 2:
           cell.classList.add("wood");
-          //   gameBoard.appendChild(cell);
           break;
         case 3:
           cell.classList.add("tree");
-          //   gameBoard.appendChild(cell);
           break;
         case 4:
           cell.classList.add("soil");
-          //   gameBoard.appendChild(cell);
           break;
         case 5:
           cell.classList.add("sand");
-          //   gameBoard.appendChild(cell);
           break;
         case 6:
           cell.classList.add("stone");
-          //   gameBoard.appendChild(cell);
           break;
       }
     }
