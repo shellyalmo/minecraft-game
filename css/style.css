@@ -26,6 +26,7 @@ body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   line-height: 1.6;
+  background-color: rgb(33, 33, 33);
 }
 
 /* ul {
@@ -48,7 +49,7 @@ a:visited {
 /* gameboard screen */
 /* tools side menu */
 .side-menu {
-  background-color: grey;
+  background-color: rgb(33, 33, 33);
   width: 20vw;
   display: flex;
   flex-direction: column;
@@ -64,7 +65,7 @@ a:visited {
 .pickaxe {
   width: 8vw;
   height: 8vh;
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid rgb(255, 255, 255);
   background-size: cover;
   cursor: pointer;
 }
@@ -99,7 +100,7 @@ a:visited {
   height: 100vh;
 }
 .game-board {
-  margin: 1rem 0;
+  margin: 1rem;
   width: 80vw;
   display: grid;
   grid-template-rows: repeat(15, 1fr);
