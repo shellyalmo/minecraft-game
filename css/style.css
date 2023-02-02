@@ -39,11 +39,30 @@ a:visited {
 }
 
 /* opening screen */
+.opening-screen {
+  background-image: url(../assets/opening-screen-background.png);
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
 .instructions-container {
   display: flex;
+  font-size: 2rem;
+  background-color: black;
+  opacity: 0.7;
+  width: 30vw;
+  height: 30vh;
+  color: white;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.instructions-container > * {
+  margin: 2rem;
+}
+#start-game-btn {
+  font-size: 3rem;
 }
 
 /* gameboard screen */
