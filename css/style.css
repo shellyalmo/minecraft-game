@@ -64,11 +64,19 @@ a:visited {
 .pickaxe {
   width: 8vw;
   height: 8vh;
-  border: 1px solid red;
+  border: 1px solid rgb(0, 0, 0);
   background-size: cover;
+  cursor: pointer;
+}
+.shovel:hover,
+.axe:hover,
+.pickaxe:hover {
+  opacity: 0.5;
 }
 .tools > * {
   margin: 3rem;
+  width: 5vw;
+  height: 9vh;
 }
 .shovel {
   background-image: url("../assets/tools/shovel.png");
