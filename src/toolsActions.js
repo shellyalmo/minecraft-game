@@ -24,11 +24,19 @@ Array.from(cells).forEach(function (element) {
   element.addEventListener("click", (e) => {
     cellClassName = e.target.className;
     cellClassNameArray = cellClassName.split(" ");
+    const activeToolClass = document.getElementsByClassName(activeTool);
+    const originalStyle = activeToolClass.item(0).style.border;
     if (toolsMaterialsObj[activeTool].includes(cellClassNameArray[1])) {
       e.target.classList.remove(cellClassNameArray[1]);
+      activeToolClass.item(0).style.border = "5px solid green";
+      setTimeout(function () {
+        activeToolClass.item(0).style.border = originalStyle;
+      }, 300);
     } else {
-      const activeToolClass = document.getElementsByClassName(activeTool);
-      activeToolClass.style.border = "5px solid red";
+      activeToolClass.item(0).style.border = "5px solid red";
+      setTimeout(function () {
+        activeToolClass.item(0).style.border = originalStyle;
+      }, 300);
     }
   });
 });
