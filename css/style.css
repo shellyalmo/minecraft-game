@@ -37,9 +37,58 @@ a:visited {
   text-decoration: none;
 }
 
+/* opening screen */
 .instructions-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+/* gameboard screen */
+/* tools side menu */
+.side-menu {
+  background-color: grey;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.side-menu > * {
+  margin: 5rem;
+}
+.shovel,
+.axe,
+.pickaxe {
+  width: 8vw;
+  height: 8vh;
+  border: 1px solid red;
+  background-size: cover;
+}
+.tools > * {
+  margin: 3rem;
+}
+.shovel {
+  background-image: url("../assets/tools/shovel.png");
+}
+.axe {
+  background-image: url("../assets/tools/axe.png");
+}
+.pickaxe {
+  background-image: url("../assets/tools/pickaxe.png");
+}
+.inventory {
+  width: 5vw;
+  height: 5vh;
+  background-color: sandybrown;
+}
+
+/* game main screen */
+.game-container {
+  display: flex;
+}
+.game-board {
+  width: 80vw;
 }
