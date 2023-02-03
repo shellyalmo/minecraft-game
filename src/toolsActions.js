@@ -1,3 +1,5 @@
+import addToInventory from "./inventory.js";
+
 const toolsMaterialsObj = {
   axe: ["wood", "tree"],
   pickaxe: ["stone"],
@@ -22,16 +24,18 @@ Array.from(tools).forEach(function (element) {
 const cells = document.getElementsByClassName("sky");
 Array.from(cells).forEach(function (element) {
   element.addEventListener("click", (e) => {
-    cellClassName = e.target.className;
-    cellClassNameArray = cellClassName.split(" ");
+    let cellClassName = e.target.className;
+    let cellClassNameArray = cellClassName.split(" ");
     const activeToolClass = document.getElementsByClassName(activeTool);
     const originalStyle = activeToolClass.item(0).style.border;
+    // console.log(cellClassNameArray[1]);
     if (toolsMaterialsObj[activeTool].includes(cellClassNameArray[1])) {
       e.target.classList.remove(cellClassNameArray[1]);
       activeToolClass.item(0).style.border = "5px solid green";
       setTimeout(function () {
         activeToolClass.item(0).style.border = originalStyle;
       }, 300);
+      addToInventory(cellClassNameArray[1]);
     } else {
       activeToolClass.item(0).style.border = "5px solid red";
       setTimeout(function () {
