@@ -107,12 +107,16 @@ a:visited {
 .pickaxe {
   background-image: url("../assets/tools/pickaxe.png");
 }
-.inventory {
-  width: 5vw;
-  height: 5vh;
-  background-color: sandybrown;
+.inventory-box {
+  width: 7rem;
+  height: 7rem;
+  background-color: grey;
 }
-
+.inventory-text {
+  color: #fff;
+  margin-top: 25rem;
+  font-size: 2rem;
+}
 /* game main screen */
 .game-container {
   display: flex;

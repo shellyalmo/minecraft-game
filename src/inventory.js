@@ -1,5 +1,5 @@
 let inventory = [];
-const inventoryDiv = document.querySelector(".inventory");
+const inventoryDiv = document.querySelector(".inventory-box");
 
 /**
  * add cell to inventory array
@@ -20,6 +20,12 @@ Array.from(cells).forEach(function (element) {
   element.addEventListener("click", (e) => {
     if (mode === "inventory") {
       e.target.classList.add(inventory.pop());
+      if (inventory.length > 0) {
+        let url = `../assets/cells/${inventory[inventory.length - 1]}.png`;
+        inventoryDiv.style.backgroundImage = "url(" + url + ")";
+      } else {
+        inventoryDiv.style.backgroundImage = "none";
+      }
     }
   });
 });
