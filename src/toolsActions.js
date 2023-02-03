@@ -1,4 +1,5 @@
-import addToInventory from "./inventory.js";
+// mode: harvesting or inventory
+let mode = "harvesting";
 
 const toolsMaterialsObj = {
   axe: ["wood", "tree"],
@@ -13,6 +14,7 @@ let activeTool = "";
 const tools = document.getElementsByClassName("tool");
 Array.from(tools).forEach(function (element) {
   element.addEventListener("click", (e) => {
+    mode = "harvesting";
     activeTool = e.target.className;
     activeTool = activeTool.slice(0, activeTool.indexOf(" "));
   });
