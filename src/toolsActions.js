@@ -33,7 +33,12 @@ Array.from(cells).forEach(function (element) {
       const originalStyle = activeToolClass.item(0).style.border;
       // console.log(cellClassNameArray[1]);
       if (toolsMaterialsObj[activeTool].includes(cellClassNameArray[1])) {
-        e.target.classList.remove(cellClassNameArray[1]);
+        e.target.classList.add("shake");
+        setTimeout(function () {
+          e.target.classList.remove("shake");
+          e.target.classList.remove(cellClassNameArray[1]);
+        }, 250);
+
         activeToolClass.item(0).style.border = "5px solid green";
         setTimeout(function () {
           activeToolClass.item(0).style.border = originalStyle;
