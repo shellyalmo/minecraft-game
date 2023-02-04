@@ -22,12 +22,11 @@
   </head>
   <body>
     <div class="game-container">
-      <div class="game-board" id="cells-board"></div>
       <div class="side-menu">
         <div class="tools">
-          <div class="axe tool"></div>
-          <div class="pickaxe tool"></div>
-          <div class="shovel tool"></div>
+          <div title="axe" class="axe tool"></div>
+          <div title="pickaxe" class="pickaxe tool"></div>
+          <div title="shovel" class="shovel tool"></div>
         </div>
         <div class="inventory">
           <span class="inventory-text">Inventory:</span>
@@ -35,6 +34,7 @@
         </div>
         <button id="reset-btn"><a href="../index.html">Reset Game</a></button>
       </div>
+      <div class="game-board" id="cells-board"></div>
     </div>
     <script src="../src/gameBoard.js"></script>
     <script src="../src/toolsActions.js"></script>

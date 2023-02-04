@@ -82,14 +82,15 @@ Array.from(cells).forEach(function (element) {
         !e.target.classList.contains("soil") &&
         !e.target.classList.contains("cloud") &&
         !e.target.classList.contains("sand") &&
-        !e.target.classList.contains("stone"));
+        !e.target.classList.contains("stone") &&
+        !e.target.classList.contains("grass"));
 
     const originalStyleInventory = inventoryDiv.style.border;
     if (mode === "inventory" && isOnlySky && hasNeighbor(e.target)) {
       inventoryDiv.style.border = "5px solid green";
       setTimeout(function () {
         inventoryDiv.style.border = originalStyleInventory;
-      }, 300);
+      }, 100);
       e.target.classList.add(inventory.pop());
       if (inventory.length > 0) {
         let url = `../assets/cells/${inventory[inventory.length - 1]}.png`;
@@ -101,7 +102,7 @@ Array.from(cells).forEach(function (element) {
       inventoryDiv.style.border = "5px solid red";
       setTimeout(function () {
         inventoryDiv.style.border = originalStyleInventory;
-      }, 300);
+      }, 100);
     }
   });
 });

@@ -4,7 +4,7 @@ let mode = "";
 const toolsMaterialsObj = {
   axe: ["wood", "tree"],
   pickaxe: ["stone"],
-  shovel: ["sand", "soil"],
+  shovel: ["sand", "soil", "grass"],
 };
 // console.log(toolsMaterialsObj["axe"][0]);
 
@@ -37,13 +37,13 @@ Array.from(cells).forEach(function (element) {
         activeToolClass.item(0).style.border = "5px solid green";
         setTimeout(function () {
           activeToolClass.item(0).style.border = originalStyle;
-        }, 300);
+        }, 100);
         addToInventory(cellClassNameArray[1]);
       } else {
         activeToolClass.item(0).style.border = "5px solid red";
         setTimeout(function () {
           activeToolClass.item(0).style.border = originalStyle;
-        }, 300);
+        }, 100);
       }
     }
   });

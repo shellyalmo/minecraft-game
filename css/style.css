@@ -168,3 +168,6 @@ a:visited {
 .stone {
   background-image: url("../assets/cells/stone.png");
 }
+.grass {
+  background-image: url("../assets/cells/grass.png");
+}
