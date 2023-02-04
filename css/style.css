@@ -23,7 +23,7 @@ html {
 
 body {
   box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
+  font-family: "VT323", monospace;
   font-weight: 400;
   line-height: 1.6;
   background-color: rgb(33, 33, 33);
@@ -37,6 +37,7 @@ body {
 a,
 a:visited {
   text-decoration: none;
+  font-family: "VT323", monospace;
 }
 
 /* opening screen */
@@ -49,7 +50,9 @@ a:visited {
 }
 .instructions-container {
   display: flex;
-  font-size: 2rem;
+  padding: 1rem;
+  font-size: 3.5rem;
+  line-height: 4rem;
   background-color: black;
   opacity: 0.7;
   width: 30vw;
@@ -123,6 +126,9 @@ a:visited {
   color: #fff;
   margin-top: 25rem;
   font-size: 2rem;
+}
+#reset-btn {
+  font-size: 3rem;
 }
 /* game main screen */
 .game-container {
