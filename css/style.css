@@ -125,10 +125,10 @@ a:visited {
 .inventory-text {
   color: #fff;
   margin-top: 25rem;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 #reset-btn {
-  font-size: 3rem;
+  font-size: 4rem;
 }
 /* game main screen */
 .game-container {
@@ -170,4 +170,34 @@ a:visited {
 }
 .grass {
   background-image: url("../assets/cells/grass.png");
+}
+
+/* transition effect between pages */
+.animate-in {
+  -webkit-animation: fadeIn 7s ease-in;
+  animation: fadeIn 7s ease-in;
+}
+
+.animate-out {
+  -webkit-transition: opacity 0.1s;
+  transition: opacity 0.1s;
+  opacity: 0;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

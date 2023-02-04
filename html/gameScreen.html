@@ -36,6 +36,11 @@
       </div>
       <div class="game-board" id="cells-board"></div>
     </div>
+    <script>
+      window.addEventListener("beforeunload", function () {
+        document.body.classList.add("animate-out");
+      });
+    </script>
     <script src="../src/gameBoard.js"></script>
     <script src="../src/toolsActions.js"></script>
     <script defer src="../src/inventory.js"></script>
