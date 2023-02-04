@@ -28,23 +28,41 @@ function hasNeighbor(cellElement) {
   const rightCol = Number(cellElement.getAttribute("data-col")) + 1;
   //same row for left and right
   const row = Number(cellElement.getAttribute("data-row"));
-  const left = isMoreThanSky(
-    document.querySelector(`div[data-row="${row}"][data-col="${leftCol}"]`)
-  );
-  const right = isMoreThanSky(
-    document.querySelector(`div[data-row="${row}"][data-col="${rightCol}"]`)
-  );
+  const left =
+    leftCol >= 0
+      ? isMoreThanSky(
+          document.querySelector(
+            `div[data-row="${row}"][data-col="${leftCol}"]`
+          )
+        )
+      : false;
+  const right =
+    rightCol <= 19
+      ? isMoreThanSky(
+          document.querySelector(
+            `div[data-row="${row}"][data-col="${rightCol}"]`
+          )
+        )
+      : false;
   //check top and bottom
   const topRow = Number(cellElement.getAttribute("data-row")) - 1;
   const bottomRow = Number(cellElement.getAttribute("data-row")) + 1;
   //same column for top and bottom
   const col = Number(cellElement.getAttribute("data-col"));
-  const top = isMoreThanSky(
-    document.querySelector(`div[data-row="${topRow}"][data-col="${col}"]`)
-  );
-  const bottom = isMoreThanSky(
-    document.querySelector(`div[data-row="${bottomRow}"][data-col="${col}"]`)
-  );
+  const top =
+    topRow >= 0
+      ? isMoreThanSky(
+          document.querySelector(`div[data-row="${topRow}"][data-col="${col}"]`)
+        )
+      : false;
+  const bottom =
+    bottomRow <= 13
+      ? isMoreThanSky(
+          document.querySelector(
+            `div[data-row="${bottomRow}"][data-col="${col}"]`
+          )
+        )
+      : true;
   const neighbors = [left, right, top, bottom];
 
   return neighbors.includes(true);
