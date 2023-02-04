@@ -88,11 +88,12 @@ a:visited {
   border: 1px solid rgb(255, 255, 255);
   background-size: cover;
   cursor: pointer;
+  opacity: 0.8;
 }
 .shovel:hover,
 .axe:hover,
 .pickaxe:hover {
-  opacity: 0.5;
+  opacity: 1;
 }
 .tools > * {
   margin: 3rem;
@@ -111,7 +112,12 @@ a:visited {
 .inventory-box {
   width: 7rem;
   height: 7rem;
+  cursor: pointer;
   background-color: grey;
+  opacity: 0.8;
+}
+.inventory-box:hover {
+  opacity: 1;
 }
 .inventory-text {
   color: #fff;
