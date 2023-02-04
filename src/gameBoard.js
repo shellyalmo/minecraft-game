@@ -26,6 +26,9 @@ function createBoard() {
   for (let i = 0; i < gameArray.length; i++) {
     for (let j = 0; j < gameArray[i].length; j++) {
       const cell = document.createElement("div");
+      cell.setAttribute("data-row", `${i}`);
+      cell.setAttribute("data-col", `${j}`);
+
       gameBoard.appendChild(cell);
 
       cell.classList.add("sky");

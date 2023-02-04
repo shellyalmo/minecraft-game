@@ -27,6 +27,7 @@ body {
   font-weight: 400;
   line-height: 1.6;
   background-color: rgb(33, 33, 33);
+  margin: 1rem;
 }
 
 /* ul {
@@ -123,7 +124,6 @@ a:visited {
   height: 100vh;
 }
 .game-board {
-  margin: 1rem;
   width: 80vw;
   display: grid;
   grid-template-rows: repeat(15, 1fr);
@@ -133,7 +133,7 @@ a:visited {
 .sky {
   width: 4vw;
   height: 7vh;
-  background-color: rgb(74, 173, 206);
+  background-color: rgb(112, 179, 202);
 }
 .sky:hover {
   border: 1px solid black;
