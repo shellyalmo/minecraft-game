@@ -6,7 +6,6 @@ const toolsMaterialsObj = {
   pickaxe: ["stone"],
   shovel: ["sand", "soil", "grass"],
 };
-// console.log(toolsMaterialsObj["axe"][0]);
 
 let activeTool = "";
 
@@ -16,6 +15,7 @@ Array.from(tools).forEach(function (element) {
   element.addEventListener("click", (e) => {
     mode = "harvesting";
     activeTool = e.target.className;
+
     activeTool = activeTool.slice(0, activeTool.indexOf(" "));
   });
 });
@@ -31,7 +31,7 @@ Array.from(cells).forEach(function (element) {
       let cellClassNameArray = cellClassName.split(" ");
       const activeToolClass = document.getElementsByClassName(activeTool);
       const originalStyle = activeToolClass.item(0).style.border;
-      // console.log(cellClassNameArray[1]);
+
       if (toolsMaterialsObj[activeTool].includes(cellClassNameArray[1])) {
         e.target.classList.add("shake");
         setTimeout(function () {
