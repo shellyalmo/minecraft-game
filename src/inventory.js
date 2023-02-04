@@ -18,7 +18,7 @@ inventoryDiv.addEventListener("click", (e) => {
 
 Array.from(cells).forEach(function (element) {
   element.addEventListener("click", (e) => {
-    if (mode === "inventory") {
+    if (mode === "inventory" && e.target.classList.length === 1) {
       e.target.classList.add(inventory.pop());
       if (inventory.length > 0) {
         let url = `../assets/cells/${inventory[inventory.length - 1]}.png`;
